@@ -3,4 +3,41 @@ body {
     background-color: #1a1a1a;
     color: #ddd;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 110%;
+    padding: 10px;
+}
+
+table {
+    text-align: right;
+}
+
+input {
+    font-size: 110%;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    outline: none;
+}
+
+input[type=number] {
+    max-width: 5em;
+    background-color: #1a1a1a;
+    border: #666 1px solid;
+    color: #ccc;
+    padding: 5px 10px;
+    margin: 2px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+input[type=button] {
+    color: white;
+    background-color: #111;
+    border: darkred 1px solid;
+    padding: 8px 25px;
+    border-radius: 25px;
+}
+
+input[type=button]:hover {
+    background-color: darkred;
+    cursor: pointer;
 }
