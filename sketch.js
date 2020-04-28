@@ -15,13 +15,27 @@ function getData() {
     let Depth = int(select("#depth").value());
     let glueFlap = int(select("#glueFlap").value());
     let tuckFlap = int(select("#tuckFlap").value());
+    let svg = split(dielineMaker(Length, Width, Depth, glueFlap, tuckFlap), '\n')
 
-    dielineMaker(Length, Width, Depth, glueFlap, tuckFlap);
+    return {
+        l: Length,
+        w: Width,
+        d: Depth,
+        g: glueFlap,
+        t: tuckFlap,
+        SVGtext: svg
+    }
+}
+
+function saveSVG() {
+    let box = getData();
+    saveStrings(box.SVGtext, 'box_' + box.l + '-' + box.w + '-' + box.d + '-' + box.g + '-' + box.t + '.svg.txt')
 }
 
 function dielineMaker(Length, Width, Depth, glueFlap, tuckFlap) {
     if (SVGelement) SVGelement.remove();
     SVGelement = createElement("div", svgText(Length, Width, Depth, glueFlap, tuckFlap));
+    return svgText(Length, Width, Depth, glueFlap, tuckFlap);
 }
 
 function svgText(l, w, d, g, t) {
@@ -41,7 +55,7 @@ function svgText(l, w, d, g, t) {
     // style
     svgTxt += '<style type="text/css">\n';
     svgTxt += ' .st0{fill:none;stroke:#FFBF00;stroke-width:' + (scl / 2) + ';stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n';
-    svgTxt += ' .st1{fill:none;stroke:#fff;stroke-width:' + (scl / 2) + ';stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n';
+    svgTxt += ' .st1{fill:none;stroke:#888;stroke-width:' + (scl / 2) + ';stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n';
     svgTxt += ' .st2{fill:none;stroke:#ff4823;stroke-width:' + (scl / 2) + ';stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n';
     svgTxt += '</style>\n';
 
