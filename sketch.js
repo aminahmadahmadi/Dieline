@@ -51,6 +51,7 @@ function svgText(l, w, d, g, t) {
 
     let svgTxt = '';
     svgTxt += '<!-- Generator: Amin Ahmad Ahmadi  -->\n';
+    svgTxt += '<!-- Length: ' + l + 'mm, Width: ' + w + 'mm, Depth: ' + d + 'mm, glueFlap: ' + g + 'mm, tuckFlap: ' + t + 'mm  -->\n';
     svgTxt += '<svg version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink = "http://www.w3.org/1999/xlink" xmlns:a = "http://maan.studio/"  x="0px" y="0px" width="' + (2 * _left + boxW) + 'mm" height="' + (2 * _top + boxH) + 'mm" viewBox="0 0 ' + scl * (2 * _left + boxW) + ' ' + scl * (2 * _top + boxH) + '" style="enable-background:New 0 0 ' + scl * (2 * _left + boxW) + ' ' + scl * (2 * _top + boxH) + ';"  xml:Space = "preserve" >\n'
     // style
     svgTxt += '<style type="text/css">\n';
