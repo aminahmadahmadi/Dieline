@@ -1,6 +1,6 @@
 # Dieline Maker
 
 
-Line's numbers help:
+Line numbers help:
 ---
 ![](Assets/helpDocs/lineNumberHelp.png)
