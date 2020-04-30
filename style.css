@@ -16,6 +16,10 @@ table {
     text-align: right;
 }
 
+td {
+    min-width: 30px;
+}
+
 input {
     font-size: 110%;
     font-family: 'Courier New', Courier, monospace;
