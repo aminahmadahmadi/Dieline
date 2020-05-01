@@ -65,29 +65,29 @@ function svgText(l, w, d, g, t) {
     // ------------------------------- Yellow Lines ----------------------------------
     svgTxt += '<g>\n';
     // Yellow 1
-    svgTxt += svgLine('st0', scl, _left, _top, g, w + t - 1, g, d + w + t - 1);
+    svgTxt += svgLine(g, w + t - 1, g, d + w + t - 1, 'st0', scl, _left, _top);
     // Yellow 2                                                    
-    svgTxt += svgLine('st0', scl, _left, _top, g + x, t, l + g - x, t);
+    svgTxt += svgLine(g + x, t, l + g - x, t, 'st0', scl, _left, _top);
     // Yellow 3                                                    
-    svgTxt += svgLine('st0', scl, _left, _top, g, w + t - 1.5, g + l, w + t - 1.5);
+    svgTxt += svgLine(g, w + t - 1.5, g + l, w + t - 1.5, 'st0', scl, _left, _top);
     // Yellow 4                                                    
-    svgTxt += svgLine('st0', scl, _left, _top, g + l, w + t - 1, g + l, d + w + t - 1);
+    svgTxt += svgLine(g + l, w + t - 1, g + l, d + w + t - 1, 'st0', scl, _left, _top);
     // Yellow 5
-    svgTxt += svgLine('st0', scl, _left, _top, g + l, w + t - 1, g + l + w - 0.65, w + t - 1);
+    svgTxt += svgLine(g + l, w + t - 1, g + l + w - 0.65, w + t - 1, 'st0', scl, _left, _top);
     // Yellow 6
-    svgTxt += svgLine('st0', scl, _left, _top, g + l + 0.65, d + w + t - 1, g + l + w, d + w + t - 1);
+    svgTxt += svgLine(g + l + 0.65, d + w + t - 1, g + l + w, d + w + t - 1, 'st0', scl, _left, _top);
     // Yellow 7                                                    
-    svgTxt += svgLine('st0', scl, _left, _top, g + l + w, w + t - 1, g + l + w, d + w + t - 1);
+    svgTxt += svgLine(g + l + w, w + t - 1, g + l + w, d + w + t - 1, 'st0', scl, _left, _top);
     // Yellow 8
-    svgTxt += svgLine('st0', scl, _left, _top, g + l + w, d + w + t - 1.5, g + l + l + w, d + w + t - 1.5);
+    svgTxt += svgLine(g + l + w, d + w + t - 1.5, g + l + l + w, d + w + t - 1.5, 'st0', scl, _left, _top);
     // Yellow 9
-    svgTxt += svgLine('st0', scl, _left, _top, g + l + w + x, d + w + w + t - 2, g + l + l + w - x, d + w + w + t - 2);
+    svgTxt += svgLine(g + l + w + x, d + w + w + t - 2, g + l + l + w - x, d + w + w + t - 2, 'st0', scl, _left, _top);
     // Yellow 10                                                                
-    svgTxt += svgLine('st0', scl, _left, _top, g + l + l + w, w + t - 1, g + l + l + w, d + w + t - 1);
+    svgTxt += svgLine(g + l + l + w, w + t - 1, g + l + l + w, d + w + t - 1, 'st0', scl, _left, _top);
     // Yellow 11
-    svgTxt += svgLine('st0', scl, _left, _top, g + l + l + w + 0.65, w + t - 1, g + l + l + w + w - 0.75, w + t - 1);
+    svgTxt += svgLine(g + l + l + w + 0.65, w + t - 1, g + l + l + w + w - 0.75, w + t - 1, 'st0', scl, _left, _top);
     // Yellow 12
-    svgTxt += svgLine('st0', scl, _left, _top, g + l + l + w, d + w + t - 1, g + l + l + w + w - 0.75, d + w + t - 1);
+    svgTxt += svgLine(g + l + l + w, d + w + t - 1, g + l + l + w + w - 0.75, d + w + t - 1, 'st0', scl, _left, _top);
 
     svgTxt += '</g>\n';
 
@@ -100,7 +100,7 @@ function svgText(l, w, d, g, t) {
         scl * _left + ',' + scl * (_top + (d + w + t - 4)) + ' ' +
         scl * (g + _left) + ',' + scl * (_top + (d + w + t - 1)) + ' "/>\n'
     // Gray 2
-    svgTxt += svgLine('st1', scl, _left, _top, g, w + t - 1, g, t - 1);
+    svgTxt += svgLine(g, w + t - 1, g, t - 1, 'st1', scl, _left, _top);
     // Gray 3
     svgTxt += ' <polyline class="st1" points="' +
         (scl * (g - 1.5) + scl * _left) + ',' + (scl * _top + scl * (t - 1)) + ' ' +
@@ -113,7 +113,7 @@ function svgText(l, w, d, g, t) {
         ' ' + scl * (0.6 * 0.5 * t) + ',' + scl * (-0.85 * t) +
         ' ' + scl * (0.8 * 0.5 * t + 0.16 * t) + ',' + scl * (1 - t) + ' "/>\n'
     // Gray 5
-    svgTxt += svgLine('st1', scl, _left, _top, g + 0.75 + 0.8 * 0.5 * t + 0.16 * t, 0, l + g - 0.75 - 0.8 * 0.5 * t - 0.16 * t, 0);
+    svgTxt += svgLine(g + 0.75 + 0.8 * 0.5 * t + 0.16 * t, 0, l + g - 0.75 - 0.8 * 0.5 * t - 0.16 * t, 0, 'st1', scl, _left, _top);
     // Gray 6
     svgTxt += ' <path class="st1" d="M' +
         scl * (_left + l + g - 0.75) + ',' + scl * (_top + (t - 1)) +
@@ -126,7 +126,7 @@ function svgText(l, w, d, g, t) {
         ' ' + scl * ((l + g - x) + _left) + ',' + scl * (_top + (t - 1)) +
         ' ' + scl * ((g + l - x) + _left) + ',' + scl * (_top + (t + 2)) + '"/>\n'
     // Gray 8
-    svgTxt += svgLine('st1', scl, _left, _top, g + l, w + t - 1, g + l, t - 1);
+    svgTxt += svgLine(g + l, w + t - 1, g + l, t - 1, 'st1', scl, _left, _top);
     // Gray 9 
     svgTxt += ' <polyline class="st1" points="' +
         scl * (_left + (g + l)) + ',' + scl * (_top + (w + t - 1)) +
@@ -137,7 +137,7 @@ function svgText(l, w, d, g, t) {
         ' ' + scl * ((g + l + w) + _left - 0.65) + ',' + scl * (_top + (w + t - x + 1)) +
         ' ' + scl * ((g + l + w) + _left - 0.65) + ',' + scl * (_top + (w + t - 1)) + ' "/>\n'
     // Gray 10
-    svgTxt += svgLine('st1', scl, _left, _top, g + l + w - 0.65, w + t - 1, g + l + l + w + 0.65, w + t - 1)
+    svgTxt += svgLine(g + l + w - 0.65, w + t - 1, g + l + l + w + 0.65, w + t - 1, 'st1', scl, _left, _top)
     // Gray 11 
     svgTxt += ' <polyline class="st1" points="' +
         scl * (_left + (g + l + l + w) + 0.65) + ',' + scl * (_top + (w + t - 1)) +
@@ -148,7 +148,7 @@ function svgText(l, w, d, g, t) {
         ' ' + scl * (_left + (g + l + l + w + w - 3) - 0.75) + ',' + scl * (_top + (w + t - 4)) +
         ' ' + scl * (_left + (g + l + l + w + w) - 0.75) + ',' + scl * (_top + (w + t - 1)) + ' "/>\n'
     // Gray 12                                                             
-    svgTxt += svgLine('st1', scl, _left, _top, g + l + l + w + w - 0.75, w + t - 1, g + l + l + w + w - 0.75, d + w + t - 1);
+    svgTxt += svgLine(g + l + l + w + w - 0.75, w + t - 1, g + l + l + w + w - 0.75, d + w + t - 1, 'st1', scl, _left, _top);
     // Gray 13 
     svgTxt += ' <polyline class="st1" points="' +
         scl * (_left + l + w + g + l) + ',' + scl * (_top + d + w + t - 1) + ' ' +
@@ -159,7 +159,7 @@ function svgText(l, w, d, g, t) {
         scl * (_left + l + w + g + l + w - 0.75) + ',' + scl * (_top + d + w + t + x - 3) + ' ' +
         scl * (_left + l + w + g + l + w - 0.75) + ',' + scl * (_top + d + w + t - 1) + ' "/>\n'
     // Gray 14 
-    svgTxt += svgLine('st1', scl, _left, _top, g + l + l + w, w + t + d - 1, g + l + l + w, w + t + d + w - 1);
+    svgTxt += svgLine(g + l + l + w, w + t + d - 1, g + l + l + w, w + t + d + w - 1, 'st1', scl, _left, _top);
     // Gray 15 
     svgTxt += ' <polyline class="st1" points="' +
         scl * (_left + g + l + w + l + 1.5) + ',' +
@@ -175,7 +175,7 @@ function svgText(l, w, d, g, t) {
         scl * (-0.60 * 0.5 * t) + ',' + scl * (0.85 * t) + ' ' +
         scl * (-0.80 * 0.5 * t - 0.16 * t) + ',' + scl * (t - 1) + ' "/>\n'
     // Gray 17
-    svgTxt += svgLine('st1', scl, _left, _top, l + w + g + 0.75 + 0.80 * 0.5 * t + 0.16 * t, t + w + d + w + t - 2, l + g + l + w - 0.75 - 0.80 * 0.5 * t - 0.16 * t, t + w + d + w + t - 2);
+    svgTxt += svgLine(l + w + g + 0.75 + 0.80 * 0.5 * t + 0.16 * t, t + w + d + w + t - 2, l + g + l + w - 0.75 - 0.80 * 0.5 * t - 0.16 * t, t + w + d + w + t - 2, 'st1', scl, _left, _top);
     // Gray 18
     svgTxt += ' <path class="st1" d="M' +
         scl * (_left + l + w + g + 0.75) + ',' + scl * (_top + t + w + d + w - 1) + 'c ' +
@@ -188,7 +188,7 @@ function svgText(l, w, d, g, t) {
         scl * (_left + w + l + g + x) + ',' + scl * (_top + w + w + d + t - 1) + ' ' +
         scl * (_left + w + l + g + x) + ',' + scl * (_top + w + w + d + t - 4) + '"/>\n'
     // Gray 20
-    svgTxt += svgLine('st1', scl, _left, _top, g + l + w, w + t + d - 1, g + l + w, w + t + d + w - 1);
+    svgTxt += svgLine(g + l + w, w + t + d - 1, g + l + w, w + t + d + w - 1, 'st1', scl, _left, _top);
     // Gray 21
     svgTxt += ' <polyline class="st1" points="' +
         scl * (_left + g + l + 0.65) + ',' + scl * (_top + w + d + t - 1) + ' ' +
@@ -199,7 +199,7 @@ function svgText(l, w, d, g, t) {
         scl * (_left + g + l + w - 3) + ',' + scl * (_top + w + d + t + 2) + ' ' +
         scl * (_left + g + l + w) + ',' + scl * (_top + w + d + t - 1) + ' "/>\n'
     // Gray 22 
-    svgTxt += svgLine('st1', scl, _left, _top, g, w + t + d - 1, g + l + 0.65, w + t + d - 1);
+    svgTxt += svgLine(g, w + t + d - 1, g + l + 0.65, w + t + d - 1, 'st1', scl, _left, _top);
 
 
     svgTxt += '</g>\n';
@@ -208,7 +208,7 @@ function svgText(l, w, d, g, t) {
     return svgTxt;
 }
 
-function svgLine(style, scl, left, top, x1, y1, x2, y2) {
+function svgLine(x1, y1, x2, y2, style, scl, left, top) {
     x1 = scl * (left + x1);
     y1 = scl * (top + y1);
     x2 = scl * (left + x2);
