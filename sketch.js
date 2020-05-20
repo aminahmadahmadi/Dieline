@@ -38,10 +38,11 @@ function dielineMaker(Length, Width, Depth, glueFlap, tuckFlap) {
     return svgText(Length, Width, Depth, glueFlap, tuckFlap);
 }
 
+
 function svgText(l, w, d, g, t) {
     let scl = 1;
 
-    let x = 5 + 0.05 * l;
+    let x = 5 + 0.05 * l; // Click Lock Width
 
     let _left = 10
     let _top = 10
