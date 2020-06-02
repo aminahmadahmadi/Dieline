@@ -80,7 +80,7 @@ function svgText(l, w, d, g, t) {
     // Yellow 7                                                    
     svgTxt += svgLine(g + l + w, w + t - 1, g + l + w, d + w + t - 1, 'st0', scl, _left, _top);
     // Yellow 8
-    svgTxt += svgLine(g + l + w, d + w + t - 1.5, g + l + l + w, d + w + t - 1.5, 'st0', scl, _left, _top);
+    svgTxt += svgLine(g + l + w, d + w + t - 0.5, g + l + l + w, d + w + t - 0.5, 'st0', scl, _left, _top);
     // Yellow 9
     svgTxt += svgLine(g + l + w + x, d + w + w + t - 2, g + l + l + w - x, d + w + w + t - 2, 'st0', scl, _left, _top);
     // Yellow 10                                                                
